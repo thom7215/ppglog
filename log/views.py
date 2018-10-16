@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('<h1>PPG Log Home</h1>')
-
+    return render(request, 'log/home.html')
 
 def contact(request):
-    return HttpResponse('<h1>Contact Page</h1>')
+    return render(request, 'log/contact.html', {'title': 'Contact'})
